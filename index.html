@@ -1,0 +1,62 @@
+<html>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Главная-Akshop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <h1>Akshop</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="feedback.php">Обратная свзяь</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="sidebar">
+      <h2>Меню товаров</h2>
+      <ul>
+        <li><a href="mice.html">Мышки</a></li>
+        <li><a href="keyboards.html">Клавиатуры</a></li>
+        <li><a href="headphones.html">Наушники</a></li>
+      </ul>
+    </section>
+
+    <section class="main-content">
+      <h2>Добро пожаловать в Akshop</h2>
+      <p>
+        Этот сайт создан для покупки высокотехнологичных периферийных устройств, созданных для комфортного использования ваших девайсов.
+      </p>
+      <p>
+        Здесь вы найдете лучшие решения для геймеров и тех, кто ценит качество и эстетику.
+      </p>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Akshop | Все права защищены</p>
+  </footer>
+
+  <script>
+    // Проверяем поддержку Service Workers браузером
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('./serviceworker.js')
+          .then((registration) => {
+            console.log('Service Worker registered with scope:', registration.scope);
+          })
+          .catch((error) => {
+            console.log('Service Worker registration failed:', error);
+          });
+      });
+    }
+  </script>
+</body>
+</html>

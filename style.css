@@ -1,0 +1,160 @@
+body {
+  margin: 0;
+  padding: 0;
+  background-color: #000;
+  color: #fff;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  min-height: 100vh;
+}
+
+/* Заголовок */
+header {
+  width: 80%;
+  max-width: 1200px;
+  height: 240px;
+  border: 3px solid #1DD761;
+  margin: 0 auto;
+  text-align: center;
+  line-height: 120px;
+  color: #1DD761;
+  font-size: 36px;
+  font-weight: bold;
+  background-color: #111;
+  box-shadow: 0 0 15px rgba(29, 215, 97, 0.2);
+}
+
+/* Навигация */
+nav {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto 20px auto;
+  text-align: center;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 0;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #1DD761;
+  font-size: 18px;
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #aaf;
+}
+
+/* Основное содержимое */
+main {
+  display: flex;
+  flex-wrap: wrap;
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 30px;
+  padding-bottom: 60px;
+}
+
+/* Сайдбар */
+.sidebar {
+  width: 220px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(29, 215, 97, 0.2);
+}
+
+.sidebar ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sidebar ul li a {
+  text-decoration: none;
+  color: #1DD761;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+
+.sidebar ul li a:hover {
+  color: #0f0;
+}
+
+/* Основной контент */
+.main-content {
+  flex: 1;
+  background-color: #1a1a1a;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(29, 215, 97, 0.2);
+}
+
+.main-content h2 {
+  font-size: 28px;
+  color: #1DD761;
+  margin-bottom: 15px;
+}
+
+.main-content p {
+  font-size: 16px;
+  line-height: 1.6;
+  color: #ccc;
+  margin-bottom: 15px;
+}
+
+/* Подвал */
+footer {
+  width: 100%;
+  background-color: #111;
+  text-align: center;
+  padding: 20px 0;
+  border-top: 1px solid #1DD761;
+  color: #1DD761;
+  font-size: 14px;
+}
+
+.products {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.product-card {
+  background-color: #1a1a1a;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 0 10px rgba(29, 215, 97, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.product-info {
+  padding: 15px;
+}
+
+.product-title {
+  font-size: 18px;
+  color: #1DD761;
+  margin-bottom: 8px;
+}
+
+.product-description {
+  font-size: 14px;
+  color: #ccc;
+}

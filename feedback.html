@@ -1,0 +1,62 @@
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <title>Обратная связь - Akshop</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <header>
+    <h1>Akshop Feedback</h1>
+  </header>
+
+  <nav>
+    <ul>
+      <li><a href="index.html">Главная</a></li>
+      <li><a href="feedback.php">Обратная связь</a></li>
+      <li><a href="contacts.html">Контакты</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <section class="sidebar">
+      <h2>Меню товаров</h2>
+      <ul>
+        <li><a href="mice.html">Мышки</a></li>
+        <li><a href="keyboards.html">Клавиатуры</a></li>
+        <li><a href="headphones.html">Наушники</a></li>
+      </ul>
+    </section>
+
+    <section class="main-content">
+      <h2>Форма обратной связи</h2>
+
+      <?php if ($success): ?>
+        <p style="color: #1DD761; font-weight: bold;"><?= $success ?></p>
+      <?php elseif ($error): ?>
+        <p style="color: red; font-weight: bold;"><?= $error ?></p>
+      <?php endif; ?>
+
+      <form method="post" action="feedback.php">
+        <label for="name">Имя:</label><br/>
+        <input type="text" id="name" name="name" required class="w-full p-3 bg-black border border-[#1DD761] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1DD761]" /><br/><br/>
+
+        <label for="email">Email:</label><br/>
+        <input type="email" id="email" name="email" required class="w-full p-3 bg-black border border-[#1DD761] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1DD761]" /><br/><br/>
+
+        <label for="message">Сообщение:</label><br/>
+        <textarea id="message" name="message" rows="6" required class="w-full p-3 bg-black border border-[#1DD761] rounded-md text-white placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-[#1DD761]"></textarea><br/><br/>
+
+        <button type="submit" class="px-6 py-3 bg-[#1DD761] text-black font-semibold rounded-md hover:bg-green-400 transition-colors duration-300">
+          Отправить
+        </button>
+      </form>
+    </section>
+  </main>
+
+  <footer>
+    <p>&copy; 2025 Akshop | Все права защищены</p>
+  </footer>
+
+</body>
+</html>
